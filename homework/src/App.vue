@@ -1,22 +1,6 @@
 <template>
-  <div id="app">
-    <SignupForm msg="Sign Up Form"/>
-    <Footer />
-  </div>
+  <router-view/>
 </template>
-
-<script>
-import SignupForm from './components/SignUp.vue'
-import Footer from './components/Footer.vue'
-
-export default {
-  name: 'App',
-  components: {
-    SignupForm,
-    Footer
-  }
-}
-</script>
 
 <style>
 #app {
@@ -25,11 +9,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-
-body {
-  margin: 0;
-  background: #eee;
 }
 </style>
