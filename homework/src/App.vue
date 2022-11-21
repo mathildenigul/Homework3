@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <SignupForm msg="Sign Up Form"/>
+    <Footer />
   </div>
 </template>
 
 <script>
 import SignupForm from './components/SignUp.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    SignupForm
+    SignupForm,
+    Footer
   }
 }
 </script>
