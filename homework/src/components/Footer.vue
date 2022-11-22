@@ -9,7 +9,8 @@
 <style scoped>
 #footer{
  position:fixed;
- bottom:0;
+ bottom: 0;
+ left: 0;
  background-color: rgba(41, 37, 37, 0.914);
  color: #9670b8;
  width: 100%;
