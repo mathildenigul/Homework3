@@ -1,33 +1,55 @@
 <template>
-    <div class="wrapper">
-        <div class="post-container">
+    <div class="container">
+        <div class="post-container" v-for = "post in Posts" :key="post.id">
             <div class="user-profile">
                 <img :src="require(`@/assets/profile_pictures/${post.profile_pic}.png`)" alt="katki" />
+                    <div>
+                        <p> {{post.username}}</p>
+                        <span> {{post.date_time}}</span>
+                    </div>
             </div>
+            <div class="post-text">
+                    <p> {{post.text}}</p>
+            </div>
+            <img class="post-img" v-if=post.pic :src="require(`@/assets/post_pictures/${post.pic_src}.png`)" alt="">
+            <img v-else src="" alt="">
         </div>
     </div>
 </template>
 
 <script>
+import Posts from "@/components/Post.vue";
 export default {
     name: "Post",
-    props: ['post'],
+    data: function() {},
+computed: {
+    Posts(){
+return this.$store.state.Posts
+}
+}
 }
 </script>
 
 <style>
-.wrapper {
+.container {
     display: flex;
-    justify-content: space-between;
-    padding: 13px 5%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media(min-width: 700px) {
+        min-height: 650px;
+        min-width: 650px;
+    }
 }
 
 .post-container {
-    width: 100%;
-    background: #fff;
+    left: auto;
+    right: auto;
+    width: 500px;
+    background: rgb(241, 236, 236);
     border-radius: 6px;
     padding: 20px;
-    color: #626262;
+    border-color: #626262;
     margin: 20px 0;
 }
 
@@ -43,13 +65,29 @@ export default {
 }
 
 .user-profile p {
+    text-align: left;
     margin-bottom: -5px;
     font-weight: 500;
     color: #626262;
 }
 
-.post-text {
+.user-profile small {
+    font-size: 12px;
+}
+
+.user-profile span {
+    font-size: 13px;
     color: #9a9a9a;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.post-text {
+    text-align: left;
     margin: 15px 0;
     font-size: 15px;
 }
@@ -62,17 +100,5 @@ export default {
 .post-text a {
     color: #855fc1;
     text-decoration: none;
-}
-
-.post-img {
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 5px;
-}
-
-.post-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 </style>
