@@ -11,7 +11,7 @@
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0",
-    "sweetalert2": "^11.4.8"
+    "sweetalert": "^8.19.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

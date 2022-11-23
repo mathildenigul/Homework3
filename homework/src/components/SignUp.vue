@@ -66,6 +66,7 @@
                         this.passwordError += reqs[i] + " ";
                     }
                 }
+                
                
                 if(!this.passwordError) {
                     swal("Thank You!", "You have successfully signed up!", "success");
