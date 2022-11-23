@@ -12,6 +12,23 @@
                     <p> {{post.text}}</p>
             </div>
             <img v-if="post.pic==true" class="post-img"  :src="require(`@/assets/post_pictures/${post.pic_src}.png`)" alt="">    
+            <div class="post-row">
+                <div class="activity-icons">
+                    <div> 
+                        <img src="../assets/images/like.png" alt="">
+                        {{post.likes}}
+                    </div>
+                    <div>
+                        <img src="../assets/images/comment.png" alt="">
+                        {{post.comments}}
+                    </div>
+                    <div>
+                        <img src="../assets/images/share.png" alt="">
+                        {{post.shares}}
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -101,5 +118,22 @@ return this.$store.state.Posts
 .post-text a {
     color: #855fc1;
     text-decoration: none;
+}
+
+.post-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity-icons div img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.activity-icons div {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
 }
 </style>
