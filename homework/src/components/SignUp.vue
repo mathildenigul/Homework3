@@ -69,7 +69,7 @@
                 
                
                 if(!this.passwordError) {
-                    swal("Thank You!", "You have successfully signed up!", "success");
+                    alert("Thank You! You have successfully signed up!");
                     console.log(this.email);
                     console.log(this.password);
                     console.log(this.terms);
