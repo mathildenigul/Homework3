@@ -42,9 +42,8 @@
         methods: {
            
             handleSubmit() {
-                //Validate password length
-                this.passwordError = this.password.length < 15 &&  this.password.length > 8 ? 
-                '' : 'Password should be more than 8 characters and less than 15 characters long!';
+                this.passwordError = this.password.length < 15 &&  this.password.length >= 8 ? 
+                '' : 'Password should be at least 8 characters and less than 15 characters long!';
                 if(this.passwordError == '') this.passwordError = /[A-Z]/.test(this.password) ?
                 '' : 'Password should include at least 1 uppercase character!'; // not actually neede because if it starts with 1 it contians at least 1 :)
                 if(this.passwordError == '') this.passwordError = /.*[a-z].*[a-z].*/.test(this.password) ?
