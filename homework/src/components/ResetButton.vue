@@ -6,20 +6,20 @@
 import Posts from "@/components/Post.vue";
 export default {
     name: "Post",
-    data: function() {
+    data: function () {
         return {}
     },
-computed: {
-    Posts(){
-        return this.$store.state.Posts
-    }
-},
+    computed: {
+        Posts() {
+            return this.$store.state.Posts
+        }
+    },
 
-methods: {
-    ResetLikes() {
-        this.$store.commit('ResetLikes')
+    methods: {
+        ResetLikes() {
+            this.$store.commit('ResetLikes')
+        }
     }
-}
 }
 </script>
 

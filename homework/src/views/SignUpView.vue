@@ -1,7 +1,7 @@
 <template>
   <div id="signup">
     <Header />
-    <SignupForm msg="Sign Up Form"/>
+    <SignupForm msg="Sign Up Form" />
     <Footer />
   </div>
 </template>

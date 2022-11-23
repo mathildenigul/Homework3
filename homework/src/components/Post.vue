@@ -1,32 +1,33 @@
 <template>
     <div class="container">
-        <div class="post-container" v-for = "post in Posts" :key="post.id">
+        <div class="post-container" v-for="post in Posts" :key="post.id">
             <div class="user-profile">
                 <img :src="require(`@/assets/profile_pictures/${post.profile_pic}.png`)" alt="katki" />
-                    <div>
-                        <p> {{post.username}}</p>
-                        <span> {{post.date_time}}</span>
-                    </div>
+                <div>
+                    <p> {{ post.username }}</p>
+                    <span> {{ post.date_time }}</span>
+                </div>
             </div>
             <div class="post-text">
-                    <p> {{post.text}}</p>
+                <p> {{ post.text }}</p>
             </div>
-            <img v-if="post.pic==true" class="post-img"  :src="require(`@/assets/post_pictures/${post.pic_src}.png`)" alt="">    
+            <img v-if="post.pic == true" class="post-img" :src="require(`@/assets/post_pictures/${post.pic_src}.png`)"
+                alt="">
             <div class="post-row">
                 <div class="activity-icons">
-                    <div> 
+                    <div>
                         <img src="../assets/images/like.png" v-on:click="$store.commit('IncreaseLikes', post.id)">
-                        {{post.likes}}
+                        {{ post.likes }}
                     </div>
                     <div>
                         <img src="../assets/images/comment.png" alt="">
-                        {{post.comments}}
+                        {{ post.comments }}
                     </div>
                     <div>
                         <img src="../assets/images/share.png" alt="">
-                        {{post.shares}}
+                        {{ post.shares }}
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -37,20 +38,20 @@
 import Posts from "@/components/Post.vue";
 export default {
     name: "Post",
-    data: function() {
+    data: function () {
         return {}
     },
-computed: {
-    Posts(){
-        return this.$store.state.Posts
-    }
-},
+    computed: {
+        Posts() {
+            return this.$store.state.Posts
+        }
+    },
 
-methods: {
-    IncreaseLikes() {
-        this.$store.commit('IncreaseLikes')
+    methods: {
+        IncreaseLikes() {
+            this.$store.commit('IncreaseLikes')
+        }
     }
-}
 }
 </script>
 
@@ -60,6 +61,7 @@ methods: {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     @media(min-width: 700px) {
         min-height: 650px;
         min-width: 650px;
