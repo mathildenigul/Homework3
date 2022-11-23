@@ -45,6 +45,17 @@
                 //Validate password length
                 this.passwordError = this.password.length < 15 &&  this.password.length > 8 ? 
                 '' : 'Password should be more than 8 characters and less than 15 characters long!';
+                if(this.passwordError == '') this.passwordError = /[A-Z]/.test(this.password) ?
+                '' : 'Password should include at least 1 uppercase character!'; // not actually neede because if it starts with 1 it contians at least 1 :)
+                if(this.passwordError == '') this.passwordError = /.*[a-z].*[a-z].*/.test(this.password) ?
+                '' : 'Password should include at least 2 lowercase characters!';     
+                if(this.passwordError == '') this.passwordError = /[0-9]/.test(this.password) ?
+                '' : 'Password should include at least 1 numberic value!';          
+                if(this.passwordError == '') this.passwordError = /[A-Z]/.test(this.password.charAt(0)) ?
+                '' : 'Password should start with an uppercase character!'; 
+                if(this.passwordError == '') this.passwordError = /_/.test(this.password) ?
+                '' : 'Password should include the character _!'; 
+
                 if(!this.passwordError) {
                     console.log(this.email);
                     console.log(this.password);
