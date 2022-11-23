@@ -24,19 +24,23 @@
  align-items: center;
  display: flex;
  flex-direction: row;
+ background-image: linear-gradient(to left, #553c9a, #b393d3);
 }
 
 #header div {
     margin: 10px;
+    
 }
 
 .link {
-    color: #c9afe2;
+    color: white;
     padding: 5px;
+    font-weight: bold;
+   
 }
 
 .link:hover {
-    background-color: #372a52;
+    background-color: #553c9a;
 	color: #f8f7f8;
 }
 

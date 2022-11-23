@@ -11,8 +11,9 @@
  position:fixed;
  bottom: 0;
  left: 0;
- background-color: rgba(41, 37, 37, 0.914);
- color: #9670b8;
+ background-image: linear-gradient(to left, #553c9a, #b393d3);
+ color: rgb(210, 207, 207);
+ font-weight: normal;
  width: 100%;
  height: 4%;
 }

@@ -108,7 +108,7 @@
         box-sizing: bordre-box;
         border: none;
         border-bottom: 1px solid #ddd;
-        color: rgb(100, 69, 96);
+        color: rgb(116, 74, 128);
     }
     
     input[type="checkbox"] {
@@ -130,10 +130,10 @@
     }
     
     button {
-        background: rgb(88, 18, 66);
+        background: linear-gradient(to left, #553c9a, #b393d3);
         border: 0;
         padding: 10px 20px;
-        color: rgb(243, 184, 234);
+        color:white;
         border-radius: 20px;
     }
     
