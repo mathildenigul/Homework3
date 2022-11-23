@@ -121,11 +121,6 @@ methods: {
     font-weight: 500;
 }
 
-.post-text a {
-    color: #855fc1;
-    text-decoration: none;
-}
-
 .post-row {
     display: flex;
     align-items: center;

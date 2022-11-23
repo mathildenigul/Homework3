@@ -1,5 +1,5 @@
 <template>
-    <button v-on:click="ResetLikes">Reset</button>
+    <button v-on:click="ResetLikes">Reset Likes</button>
 </template>
 
 <script>
@@ -25,8 +25,13 @@ methods: {
 
 <style>
 button {
-    background-color: red;
-    border-color: red;
-    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #aa98c6;
+    border-color: #855fc1;
+    border-radius: 6px;
+    border-width: 1.5px;
+    padding: 5px;
 }
 </style>
