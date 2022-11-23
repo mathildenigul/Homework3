@@ -123,6 +123,12 @@ export default createStore({
           break;
         }
       }
+    },
+
+    ResetLikes (state) {
+      for(let i = 0; i < state.Posts.length; i++) {
+        state.Posts[i].likes = 0;
+      }
     }
   },
   actions: {
