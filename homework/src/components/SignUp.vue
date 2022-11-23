@@ -19,10 +19,6 @@
                 <button class="submit" type="submit">Sign up</button>
             </div>
         </form>
-    
-        <p> Email: {{ email }} </p>
-        <p> Password: {{ password }} </p>
-        <p> Terms : {{ terms }} </p>
         
     </div>
     
@@ -72,7 +68,7 @@
                 }
                
                 if(!this.passwordError) {
-                    alert("You have successfully signed in!");
+                    swal("Thank You!", "You have successfully signed up!", "success");
                     console.log(this.email);
                     console.log(this.password);
                     console.log(this.terms);
