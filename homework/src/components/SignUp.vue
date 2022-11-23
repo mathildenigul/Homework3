@@ -1,4 +1,5 @@
 <template>
+     
     <div>
         <form @submit.prevent="handleSubmit">
             <label>Email :</label>
@@ -69,11 +70,13 @@
                         this.passwordError += reqs[i] + " ";
                     }
                 }
-
+               
                 if(!this.passwordError) {
+                    alert("You have successfully signed in!");
                     console.log(this.email);
                     console.log(this.password);
                     console.log(this.terms);
+                    
     
                 }
             }

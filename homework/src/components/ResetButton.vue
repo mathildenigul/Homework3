@@ -28,7 +28,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     color: white;
-    background-color: #aa98c6;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
     border-color: #855fc1;
     border-radius: 6px;
     border-width: 1.5px;
