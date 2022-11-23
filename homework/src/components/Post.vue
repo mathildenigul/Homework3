@@ -15,7 +15,7 @@
             <div class="post-row">
                 <div class="activity-icons">
                     <div> 
-                        <img src="../assets/images/like.png" alt="">
+                        <img src="../assets/images/like.png" v-on:click="IncreaseLikes">
                         {{post.likes}}
                     </div>
                     <div>
@@ -42,8 +42,14 @@ export default {
     },
 computed: {
     Posts(){
-return this.$store.state.Posts
-}
+        return this.$store.state.Posts
+    }
+},
+
+methods: {
+    IncreaseLikes() {
+        this.$store.commit('IncreaseLikes')
+    }
 }
 }
 </script>
@@ -127,6 +133,7 @@ return this.$store.state.Posts
 }
 
 .activity-icons div img {
+    cursor: pointer;
     width: 18px;
     margin-right: 10px;
 }

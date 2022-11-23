@@ -116,6 +116,9 @@ export default createStore({
   getters: {
   },
   mutations: {
+    IncreaseLikes (state) {
+      state.Posts.likes++
+    }
   },
   actions: {
   },
