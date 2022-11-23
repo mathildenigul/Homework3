@@ -116,8 +116,13 @@ export default createStore({
   getters: {
   },
   mutations: {
-    IncreaseLikes (state) {
-      state.Posts.likes++
+    IncreaseLikes (state, a_id) {
+      for(let i = 0; i < state.Posts.length; i++) {
+        if(state.Posts[i].id == a_id) {
+          state.Posts[i].likes++;
+          break;
+        }
+      }
     }
   },
   actions: {

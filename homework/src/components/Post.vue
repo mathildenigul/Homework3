@@ -15,7 +15,7 @@
             <div class="post-row">
                 <div class="activity-icons">
                     <div> 
-                        <img src="../assets/images/like.png" v-on:click="IncreaseLikes">
+                        <img src="../assets/images/like.png" v-on:click="$store.commit('IncreaseLikes', post.id)">
                         {{post.likes}}
                     </div>
                     <div>
