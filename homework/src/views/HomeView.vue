@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <div id="pad"></div>
   <Footer />
   <Posts></Posts>
 </template>
@@ -22,3 +23,9 @@ export default {
   } 
 }
 </script>
+
+<style scoped>
+#pad {
+  padding-top: 50px;
+}
+</style>
