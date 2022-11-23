@@ -21,11 +21,13 @@ export default createStore({
       pic_src: "2",
       likes: 30,
     },
-    /* {id: 3,
+    {id: 3,
       username: "Siiri Leer",
+      profile_pic: "Siiri_Leer",
       date_time: "September 28 2021, 23.08",
       text: "Lilled... Heinamaa... Päikesepaiste... #deep",
       pic: false,
+      pic_src: "2",
       likes: 50234,
       comments: 4678,
       shares: 342,
@@ -104,7 +106,7 @@ export default createStore({
       likes: 999,
       comments: 13,
       shares: 207,
-    }   */
+    }
     ]
   },
   getters: {

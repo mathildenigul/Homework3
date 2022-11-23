@@ -11,8 +11,7 @@
             <div class="post-text">
                     <p> {{post.text}}</p>
             </div>
-            <img class="post-img" v-if=post.pic :src="require(`@/assets/post_pictures/${post.pic_src}.png`)" alt="">
-            <img v-else src="" alt="">
+            <img v-if="post.pic==true" class="post-img"  :src="require(`@/assets/post_pictures/${post.pic_src}.png`)" alt="">    
         </div>
     </div>
 </template>
@@ -21,7 +20,9 @@
 import Posts from "@/components/Post.vue";
 export default {
     name: "Post",
-    data: function() {},
+    data: function() {
+        return {}
+    },
 computed: {
     Posts(){
 return this.$store.state.Posts
