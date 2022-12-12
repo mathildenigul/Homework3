@@ -86,7 +86,7 @@ form {
      display: block;
      padding: 10px 6px;
      width: 100%;
-     box-sizing: bordre-box;
+     box-sizing: border-box;
      border: none;
      border-bottom: 1px solid #ddd;
      color: rgb(116, 74, 128);
