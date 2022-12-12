@@ -9,6 +9,7 @@
         <div class="link">
             <router-link style="text-decoration: none; color: inherit;" to="/login">Log In</router-link>
         </div>
+    
         <div class="user-icon">
             <img src="../assets/profile_pictures/Mari_Mutt.png" />
         </div>
