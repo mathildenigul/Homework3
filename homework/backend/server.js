@@ -20,8 +20,8 @@ app.post("/api/posts/", async (req, res) => {
   try {
     const post = req.body;
     const newpost = await pool.query(
-      "INSERT INTO post (body) values ($1)    RETURNING*",
-      [post.body]
+      "INSERT INTO post (date, body) values ($1, $2)    RETURNING*",
+      [post.date, post.body]
     );
     res.json(newpost);
   } catch (err) {
