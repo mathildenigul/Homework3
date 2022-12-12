@@ -9,15 +9,19 @@
             <input type="password" v-model="password" required>
             <div v-if="passwordError" class="error">{{ passwordError }} </div>
 
-
-
-            <div>
-                <input type="checkbox" v-model="terms" required>
-                <label>Please accept terms and conditions</label>
-            </div>
             <div class="button">
-                <button class="submit" type="submit">Sign up</button>
+                <button class="submit" id="button1" type="submit">Log in</button>
             </div>
+
+            <div class="text"> or  </div>
+
+
+            <div class="link">
+                <router-link style="text-decoration:none; color: inherit;" to="/signup">Signup</router-link>
+            </div>
+
+
+        
         </form>
 
     </div>
@@ -69,10 +73,9 @@ export default {
 
 
             if (!this.passwordError) {
-                alert("Thank You! You have successfully signed up!");
+                alert("You have successfully logged in!");
                 console.log(this.email);
                 console.log(this.password);
-                console.log(this.terms);
 
 
             }
@@ -89,7 +92,7 @@ form {
      margin: 30px auto;
      background: #fff;
      text-align: left;
-     padding: 20px;
+     padding: 60px;
      border-radius: 10px;
  }
 
@@ -119,18 +122,33 @@ form {
      top: 2px;
  }
 
- 
 
  button {
+    
      background: linear-gradient(to left, #553c9a, #b393d3);
      border: 0;
+     margin-top: 10px;
      padding: 10px 20px;
      color: white;
-     border-radius: 20px;
+     border-radius: 30px;
+     
+ }
+ .text {
+    color: rgb(185, 120, 188);
+     display: inline-block;
+     margin: 25px 25px 15px;
+     text-transform: uppercase;
  }
 
- .submit {
-     text-align: center;
+ .link{
+    
+    background: linear-gradient(to left, #553c9a, #b393d3);
+     border: 0;
+     margin-top: 10px;
+     padding: 10px 20px;
+     color: white;
+     border-radius: 30px;
+     width: 50px;
  }
 
  .error {
@@ -140,5 +158,3 @@ form {
      font-weight: bold;
  }
 </style>
-    
-    
