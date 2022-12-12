@@ -69,12 +69,21 @@ export default {
 
 
             if (!this.passwordError) {
-                alert("Thank You! You have successfully signed up!");
-                console.log(this.email);
-                console.log(this.password);
-                console.log(this.terms);
-
-
+                fetch("http://localhost:3000/auth/signup", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                credentials: 'include',
+                body: JSON.stringify({email: this.email, password: this.password}),
+            })
+            .then(() => {
+            this.$router.push("/");
+            })
+            .catch((e) => {
+                console.log(e);
+                console.log("error");
+            });
             }
         }
     }
