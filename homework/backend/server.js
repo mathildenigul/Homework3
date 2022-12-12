@@ -38,3 +38,39 @@ app.get("/api/posts", async (req, res) => {
     console.error(err.message);
   }
 });
+
+app.get("/api/posts/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const posts = await pool.query("SELECT * FROM post WHERE id = $1", [id]);
+    res.json(posts.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+// put
+app.put("/api/posts/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const post = req.body;
+    const updatepost = await pool.query(
+      "UPDATE post SET (date, body) = ($2, $3) WHERE id = $1",
+      [id, post.date, post.body]
+    );
+    res.json(updatepost);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+// delete
+app.delete("/api/posts/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletepost = await pool.query("DELETE FROM post WHERE id = $1", [id]);
+    res.json(deletepost);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
