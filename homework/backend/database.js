@@ -19,12 +19,23 @@ const execute = async (query) => {
 };
 
 const createPostsTblQuery = `
-  CREATE TABLE IF NOT EXISTS "post" (
-    "id" SERIAL PRIMARY KEY,         
-    "body" VARCHAR(200) NOT NULL
-  );`;
+ DROP TABLE IF EXISTS posts;
+ CREATE TABLE posts (
+     id SERIAL PRIMARY KEY,    
+     date VARCHAR(30) NOT NULL,     
+     body VARCHAR(200) NOT NULL
+ );`;
+
+const createUsersTblQuery = `
+ DROP TABLE IF EXISTS users;
+ CREATE TABLE IF NOT EXISTS users (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  email VARCHAR(200) NOT NULL UNIQUE,
+  password VARCHAR(200) NOT NULL 
+);`;
 
 // A function to execute the previous query
 execute(createPostsTblQuery);
+execute(createUsersTblQuery);
 
 module.exports = pool;

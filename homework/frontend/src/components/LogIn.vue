@@ -43,42 +43,24 @@ export default {
     methods: {
 
         handleSubmit() {
-            let reqs = ['Password should be at least 8 characters and less than 15 characters long!',
-                'Password should include at least 1 uppercase character!',
-                'Password should include at least 2 lowercase characters!',
-                'Password should include at least 1 numberic value!',
-                'Password should start with an uppercase character!',
-                'Password should include the character _!']
-            let failed = [false, false, false, false, false, false]
-
-            failed[0] = this.password.length < 15 && this.password.length >= 8 ?
-                false : true;
-            failed[1] = /[A-Z]/.test(this.password) ?
-                false : true; // not actually neede because if it starts with 1 it contians at least 1 :)
-            failed[2] = /.*[a-z].*[a-z].*/.test(this.password) ?
-                false : true;
-            failed[3] = /[0-9]/.test(this.password) ?
-                false : true;
-            failed[4] = /[A-Z]/.test(this.password.charAt(0)) ?
-                false : true;
-            failed[5] = /_/.test(this.password) ?
-                false : true;
-
-            this.passwordError = "";
-            for (let i = 0; i < reqs.length; i++) {
-                if (failed[i]) {
-                    this.passwordError += reqs[i] + " ";
-                }
-            }
-
-
-            if (!this.passwordError) {
-                alert("You have successfully logged in!");
-                console.log(this.email);
-                console.log(this.password);
-
-
-            }
+            fetch("http://localhost:3000/auth/login", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            credentials: 'include', //  Don't forget to specify this if you need cookies
+            body: JSON.stringify({email: this.email, password: this.password}),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+        console.log(data);
+        //this.$router.push("/");
+        location.assign("/");
+        })
+        .catch((e) => {
+            console.log(e);
+            console.log("error");
+        });
         }
     }
 
