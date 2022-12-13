@@ -1,6 +1,7 @@
 <template>
   <Header />
   <div id="pad"></div>
+  <LogoutButton />
   <Footer />
   <Posts />
   <AddPostButton />
@@ -14,6 +15,7 @@ import Footer from '../components/Footer.vue'
 import Posts from '../components/Post.vue'
 import AddPostButton from '../components/AddPostButton.vue'
 import DeleteAllButton from '../components/DeleteAllButton.vue'
+import LogoutButton from '../components/LogoutButton.vue'
 
 export default {
   name: 'HomeView',
@@ -22,7 +24,8 @@ export default {
     Footer,
     Posts,
     AddPostButton,
-    DeleteAllButton
+    DeleteAllButton,
+    LogoutButton
   },
   data() {
     return {
