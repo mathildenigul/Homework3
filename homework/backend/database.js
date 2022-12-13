@@ -34,8 +34,12 @@ const createUsersTblQuery = `
   password VARCHAR(200) NOT NULL 
 );`;
 
+const createPostsContentQuery = `
+ INSERT INTO posts (date, body) values ('12.12.2020', 'you have to use then');
+`;
+
 // A function to execute the previous query
-execute(createPostsTblQuery);
+execute(createPostsTblQuery).then(execute(createPostsContentQuery));
 execute(createUsersTblQuery);
 
 module.exports = pool;
