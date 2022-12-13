@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import AddPost from '../components/AddPost.vue'
 import ContactUsForm from '../components/ContactUs.vue'
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
@@ -15,6 +16,7 @@ export default {
     name: 'ContactUsView',
     components: {
     ContactUsForm,
+    AddPost,
     Header,
     Footer
     }

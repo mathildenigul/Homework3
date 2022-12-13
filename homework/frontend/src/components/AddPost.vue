@@ -1,10 +1,10 @@
 <template>
-    <form @submit.prevent="submit" @reset="onReset">
+    <form @submit.prevent="AddPost()">
         <div>
             <label>Add post</label>
             <textarea v-model="message"></textarea>
         </div>
-        <button type="add">Add</button>
+        <button type="submit">Add</button>
     </form>
 </template>
 
@@ -13,22 +13,22 @@ export default {
     name: "App",
     data() {
         return {
-            postMessage: "",
+            message: "",
         };
     },
     methods: {
         AddPost() {
-            var postMessage = this.postMessage;
+            let date = new Date().toDateString();
             fetch("http://localhost:3000/api/posts", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(postMessage),
+                body: JSON.stringify({"date": date, "body": this.message}),
             })
             .then((response) => response.json())
-            .then((postMessage => {
-                console.log(postMessage);
+            .then((rj => {
+                console.log(rj);
                 this.$router.push("/")
             }))
         }
