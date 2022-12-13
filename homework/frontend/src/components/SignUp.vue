@@ -77,13 +77,10 @@ export default {
                 credentials: 'include',
                 body: JSON.stringify({email: this.email, password: this.password}),
             })
-            .then(() => {
-            this.$router.push("/");
+            .then((response) => {
+                if(!response.ok) alert("Error while trying to signup. Email probably already in use.");
+                else this.$router.push("/");
             })
-            .catch((e) => {
-                console.log(e);
-                console.log("error");
-            });
             }
         }
     }
