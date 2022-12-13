@@ -52,6 +52,8 @@ export default {
 .post-container {
   left: auto;
   right: auto;
+  text-align: right;
+  font-size: small;
   width: 500px;
   background: rgb(241, 236, 236);
   border-radius: 6px;

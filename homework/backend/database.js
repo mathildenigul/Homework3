@@ -1,7 +1,7 @@
 const Pool = require("pg").Pool;
 const pool = new Pool({
   user: "postgres",
-  password: "postgres",
+  password: "sudo",
   database: "homework",
   host: "localhost",
   port: "5432",
@@ -35,7 +35,7 @@ const createUsersTblQuery = `
 );`;
 
 const createPostsContentQuery = `
- INSERT INTO posts (date, body) values ('12.12.2020', 'you have to use then');
+ INSERT INTO posts (date, body) values ('10.11.2022', 'Does anyone know where the lab is today?');
 `;
 
 // A function to execute the previous query

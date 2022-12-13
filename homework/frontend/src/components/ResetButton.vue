@@ -29,6 +29,7 @@ button {
     font-weight: bold;
     color: white;
     background-image: linear-gradient(to left, #553c9a, #b393d3);
+    margin-top: 93px;
     border-color: #855fc1;
     border-radius: 6px;
     border-width: 1.5px;
