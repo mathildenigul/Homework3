@@ -3,7 +3,7 @@
   <div id="pad"></div>
   <Footer />
   <Posts />
-  <ResetButton />
+  <AddPostButton />
   <div id="pad"></div>
 </template>
 
@@ -11,7 +11,7 @@
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 import Posts from '../components/Post.vue'
-import ResetButton from '../components/ResetButton.vue'
+import AddPostButton from '../components/AddPostButton.vue'
 
 export default {
   name: 'HomeView',
@@ -19,7 +19,7 @@ export default {
     Header,
     Footer,
     Posts,
-    ResetButton
+    AddPostButton
   },
   data() {
     return {
