@@ -51,15 +51,9 @@ export default {
             credentials: 'include', //  Don't forget to specify this if you need cookies
             body: JSON.stringify({email: this.email, password: this.password}),
         })
-        .then((response) => response.json())
-        .then((data) => {
-        console.log(data);
-        //this.$router.push("/");
-        location.assign("/");
-        })
-        .catch((e) => {
-            console.log(e);
-            console.log("error");
+        .then((response) => {
+            if(!response.ok) alert("Error while trying to login. Email or password probably wrong.");
+            else this.$router.push("/");
         });
         }
     }
