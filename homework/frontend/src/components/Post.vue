@@ -42,6 +42,9 @@ export default {
 </script>
 
 <style>
+a {
+  color: purple;
+}
 .container {
   display: flex;
   justify-content: center;

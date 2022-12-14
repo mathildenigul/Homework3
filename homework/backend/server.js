@@ -43,7 +43,7 @@ app.post("/api/posts/", async (req, res) => {
 // get
 app.get("/api/posts", async (req, res) => {
   try {
-    const posts = await pool.query("SELECT * FROM posts");
+    const posts = await pool.query("SELECT * FROM posts ORDER BY id");
     res.json(posts.rows);
   } catch (err) {
     console.error(err.message);
