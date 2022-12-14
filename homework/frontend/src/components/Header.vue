@@ -3,12 +3,12 @@
         <div class="link">
             <router-link style="text-decoration: none; color: inherit;" to="/">Home</router-link>
         </div>
-        <div class="link">
+        <!-- <div class="link">
             <router-link style="text-decoration: none; color: inherit;" to="/signup">Signup</router-link>
         </div>
         <div class="link">
             <router-link style="text-decoration: none; color: inherit;" to="/login">Log In</router-link>
-        </div>
+        </div> -->
     
         <div class="user-icon">
             <img src="../assets/profile_pictures/Mari_Mutt.png" />
@@ -64,4 +64,5 @@
     height: auto;
     border-radius: 50%;
 }
+
 </style>

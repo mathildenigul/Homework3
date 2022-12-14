@@ -18,24 +18,28 @@ const execute = async (query) => {
   }
 };
 
+/* DROP TABLE IF EXISTS posts; */
 const createPostsTblQuery = `
- DROP TABLE IF EXISTS posts;
- CREATE TABLE posts (
-     id SERIAL PRIMARY KEY,    
-     date VARCHAR(30) NOT NULL,     
-     body VARCHAR(200) NOT NULL
- );`;
+CREATE TABLE IF NOT EXISTS posts (
+    id SERIAL PRIMARY KEY,    
+    date VARCHAR(30) NOT NULL,     
+    body VARCHAR(200) NOT NULL
+);`;
 
+ /* DROP TABLE IF EXISTS users; */
 const createUsersTblQuery = `
- DROP TABLE IF EXISTS users;
- CREATE TABLE IF NOT EXISTS users (
+
+CREATE TABLE IF NOT EXISTS users (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   email VARCHAR(200) NOT NULL UNIQUE,
   password VARCHAR(200) NOT NULL 
 );`;
 
 const createPostsContentQuery = `
- INSERT INTO posts (date, body) values ('10.11.2022', 'Does anyone know where the lab is today?');
+INSERT INTO posts (date, body) VALUES 
+  ('10.11.2022', 'Does anyone know where the lab is today?'),
+  ('10.12.2022', 'I am having an awful lot of trouble with this homework...'),
+  ('13.12.2022', 'Dont worry, it will be Christmas soon.');
 `;
 
 // A function to execute the previous query

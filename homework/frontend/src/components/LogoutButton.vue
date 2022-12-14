@@ -30,5 +30,6 @@ button {
     border-radius: 6px;
     border-width: 1.5px;
     padding: 5px;
+    margin-top: 30px;
 }
 </style>
