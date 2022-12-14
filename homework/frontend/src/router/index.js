@@ -53,6 +53,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ContactUsView.vue"),
   },
+  {
+    path: "/onepost",
+    name: "onepost",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/OnePostView.vue"),
+  },
 ];
 
 const router = createRouter({

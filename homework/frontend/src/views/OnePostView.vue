@@ -1,22 +1,22 @@
 <template>
-    <div id="addpost">
+    <div id="onepost">
     <Header />
-    <AddPost msg="Add a new post" />
+    <OnePost msg="Single Post view" />
     <Footer />
     </div>
 </template>
 
 <script>
-import AddPost from '../components/AddPost.vue'
+import OnePost from '../components/OnePost.vue'
 import ContactUsForm from '../components/ContactUs.vue'
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
-    name: 'AddPostView',
+    name: 'OnePostView',
     components: {
     ContactUsForm,
-    AddPost,
+    OnePost,
     Header,
     Footer
     }
@@ -24,6 +24,15 @@ export default {
 </script>
 
 <style scoped>
+#contactus {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  
   body {
     margin: 0;
     background: #eee;

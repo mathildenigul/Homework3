@@ -1,15 +1,18 @@
 <template>
   <div class="container">
     <div class="post-container" v-for="post in posts" :key="post.id">
-      <router-link style="text-decoration: none;" to="{name: '/OnePost', params: {postID: post.id}}">
-        <!-- See router link ei tööta praegu obv-->
+      <a style="text-decoration: none;" :href="'/api/onepost/' + post.id">
+<!-- <router-link style="text-decoration: none;" to="{name: '/OnePost', params: {postID: {post.id}}}"> -->
+
         <div>
           <p>{{ post.date }}</p>
         </div>
+        <div><p>{{ post.id }}</p></div>
         <div class="post-text">
           <p>{{ post.body }}</p>
         </div>
-      </router-link>
+      </a>
+     <!--  </router-link> -->
     </div>
   </div>
 </template>
