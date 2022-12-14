@@ -37,12 +37,12 @@ CREATE TABLE IF NOT EXISTS users (
 
 const createPostsContentQuery = `
 INSERT INTO posts (date, body) VALUES 
-  ('10.11.2022', 'Does anyone know where the lab is today?'),
-  ('10.12.2022', 'I am having an awful lot of trouble with this homework...'),
-  ('13.12.2022', 'Dont worry, it will be Christmas soon.');
+  ('Wed Dec 7 2022', 'Does anyone know where the lab is today?'),
+  ('Thu Dec 8 2022', 'I am having an awful lot of trouble with this homework...'),
+  ('Sun Dec 11 2022', 'Dont worry, it will be Christmas soon.');
 `;
 
-// A function to execute the previous query
+// A function to execute the previous queries
 execute(createPostsTblQuery).then(execute(createPostsContentQuery));
 execute(createUsersTblQuery);
 
