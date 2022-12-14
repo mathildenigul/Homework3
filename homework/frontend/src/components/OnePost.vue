@@ -94,16 +94,16 @@ export default {
 }
 
 .post-container {
-  left: auto;
-  right: auto;
-  text-align: right;
-  font-size: small;
-  width: 500px;
-  background: rgb(241, 236, 236);
-  border-radius: 6px;
-  padding: 20px;
-  border-color: #626262;
-  margin: 20px 0;
+    left: auto;
+    right: auto;
+    text-align: right;
+    font-size: small;
+    width: 500px;
+    background: rgb(241, 236, 236);
+    border-radius: 6px;
+    padding: 20px;
+    border-color: #626262;
+    margin: 50px 0;
 }
 
 .user-profile {
@@ -133,12 +133,6 @@ export default {
   color: #9a9a9a;
 }
 
-.post-img {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 5px;
-}
-
 .post-text {
   text-align: left;
   margin: 15px 0;
@@ -154,17 +148,5 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.activity-icons div img {
-  cursor: pointer;
-  width: 18px;
-  margin-right: 10px;
-}
-
-.activity-icons div {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 30px;
 }
 </style>
