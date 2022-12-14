@@ -40,7 +40,6 @@ export default {
         .catch((err) => console.log(err.message));
     },
     updatePost() {
-        let date = new Date().toDateString();
         fetch(`http://localhost:3000/api/posts/${this.post.id}`, {
         method: "PUT",
         headers: {
