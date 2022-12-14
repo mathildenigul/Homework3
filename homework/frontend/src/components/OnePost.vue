@@ -40,36 +40,36 @@ export default {
         .catch((err) => console.log(err.message));
     },
     updatePost() {
-        fetch(`http://localhost:3000/api/posts/${this.post.id}`, {
+      fetch(`http://localhost:3000/api/posts/${this.post.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(this.post),
-    })
+      })
         .then((response) => {
-        console.log(response.data);
+          console.log(response.data);
           //this.$router.push("/apost/" + this.post.id);
           // We are using the router instance of this element to navigate to a different URL location
-        this.$router.push("/");
+          this.$router.push("/");
         })
         .catch((e) => {
-        console.log(e);
+          console.log(e);
         });
     },
     deletePost() {
       // using Fetch - delete method - delets a specific post based on the passed id
-    fetch(`http://localhost:3000/api/posts/${this.post.id}`, {
+      fetch(`http://localhost:3000/api/posts/${this.post.id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
-    })
+      })
         .then((response) => {
-        console.log(response.data);
+          console.log(response.data);
           // We are using the router instance of this element to navigate to a different URL location
-        this.$router.push("/");
+          this.$router.push("/");
         })
         .catch((e) => {
-        console.log(e);
+          console.log(e);
         });
     },
   },
@@ -95,16 +95,16 @@ export default {
 }
 
 .post-container {
-    left: auto;
-    right: auto;
-    text-align: right;
-    font-size: small;
-    width: 500px;
-    background: rgb(241, 236, 236);
-    border-radius: 6px;
-    padding: 20px;
-    border-color: #626262;
-    margin: 20px 0;
+  left: auto;
+  right: auto;
+  text-align: right;
+  font-size: small;
+  width: 500px;
+  background: rgb(241, 236, 236);
+  border-radius: 6px;
+  padding: 20px;
+  border-color: #626262;
+  margin: 20px 0;
 }
 
 .user-profile {

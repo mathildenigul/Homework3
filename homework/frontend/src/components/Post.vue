@@ -42,6 +42,7 @@ export default {
 a {
   color: black;
 }
+
 .container {
   display: flex;
   justify-content: center;

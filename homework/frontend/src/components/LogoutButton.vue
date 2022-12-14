@@ -10,11 +10,11 @@ export default {
             fetch("http://localhost:3000/auth/logout", {
                 credentials: 'include'
             })
-            .then((response) => response.json())
-            .then((rj => {
-                console.log(rj);
-                this.$router.go();
-            }));
+                .then((response) => response.json())
+                .then((rj => {
+                    console.log(rj);
+                    this.$router.go();
+                }));
         }
     }
 }

@@ -9,28 +9,28 @@ const routes = [
     name: "home",
     component: HomeView,
 
-    beforeEnter: async(to, from, next) => {
+    beforeEnter: async (to, from, next) => {
       let authResult = await auth.authenticated();
       if (!authResult) {
-          next('/login')
+        next("/login");
       } else {
-          next();
+        next();
       }
-  }
+    },
   },
   {
     path: "/addpost",
     name: "addpost",
     component: AddPostView,
 
-    beforeEnter: async(to, from, next) => {
+    beforeEnter: async (to, from, next) => {
       let authResult = await auth.authenticated();
       if (!authResult) {
-          next('/login')
+        next("/login");
       } else {
-          next();
+        next();
       }
-  }
+    },
   },
   {
     path: "/signup",
@@ -58,16 +58,16 @@ const routes = [
     name: "onepost",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/OnePostView.vue"),
-    
-    beforeEnter: async(to, from, next) => {
-        let authResult = await auth.authenticated();
-        if (!authResult) {
-            next('/login')
-        } else {
-            next();
-  }
 
-    }}
+    beforeEnter: async (to, from, next) => {
+      let authResult = await auth.authenticated();
+      if (!authResult) {
+        next("/login");
+      } else {
+        next();
+      }
+    },
+  },
 ];
 
 const router = createRouter({

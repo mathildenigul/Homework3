@@ -1,9 +1,9 @@
 <template>
   <div id="footer">
     <div class="link">
-            <router-link style="text-decoration: none; color: inherit; " to="/contactus">Contact Us</router-link>
-        </div>
-   
+      <router-link style="text-decoration: none; color: inherit; " to="/contactus">Contact Us</router-link>
+    </div>
+
   </div>
 </template>
 
@@ -36,18 +36,19 @@
 }
 
 #footer div {
-    margin: 10px;
+  margin: 10px;
 
 }
+
 .link {
-    color: white;
-    padding: 5px;
-    font-weight: bold;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
 
 }
 
 .link:hover {
-    background-color: #553c9a;
-    color: #f8f7f8;
+  background-color: #553c9a;
+  color: #f8f7f8;
 }
 </style>

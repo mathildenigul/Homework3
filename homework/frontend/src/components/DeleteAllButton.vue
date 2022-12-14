@@ -12,11 +12,11 @@ export default {
                     "Content-Type": "application/json",
                 },
             })
-            .then((response) => response.json())
-            .then((rj => {
-                console.log(rj);
-                this.$router.go();
-            }));
+                .then((response) => response.json())
+                .then((rj => {
+                    console.log(rj);
+                    this.$router.go();
+                }));
         }
     }
 }

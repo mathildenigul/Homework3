@@ -24,13 +24,13 @@ export default {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({"date": date, "body": this.message}),
+                body: JSON.stringify({ "date": date, "body": this.message }),
             })
-            .then((response) => response.json())
-            .then((rj => {
-                console.log(rj);
-                this.$router.push("/")
-            }))
+                .then((response) => response.json())
+                .then((rj => {
+                    console.log(rj);
+                    this.$router.push("/")
+                }))
         }
     }
 }
@@ -52,6 +52,7 @@ label {
     margin: 25px 0 15px;
     text-transform: uppercase;
 }
+
 textarea {
     width: 100%;
     height: 150px;

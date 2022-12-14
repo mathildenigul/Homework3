@@ -13,17 +13,17 @@
                 <button class="submit" id="button1" type="submit">Log in</button>
             </div>
 
-            <div class="text"> Don't have a user yet?  </div>
+            <div class="text"> Don't have a user yet? </div>
 
 
             <div class="button">
-                <router-link style="text-decoration:none; color: inherit;" to="/signup" custom v-slot="{ navigate }"> 
-                    <button @click="navigate" role="link">Sign up</button> 
+                <router-link style="text-decoration:none; color: inherit;" to="/signup" custom v-slot="{ navigate }">
+                    <button @click="navigate" role="link">Sign up</button>
                 </router-link>
             </div>
 
 
-        
+
         </form>
 
     </div>
@@ -46,17 +46,17 @@ export default {
 
         handleSubmit() {
             fetch("http://localhost:3000/auth/login", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json",
-            },
-            credentials: 'include', //  Don't forget to specify this if you need cookies
-            body: JSON.stringify({email: this.email, password: this.password}),
-        })
-        .then((response) => {
-            if(!response.ok) alert("Error while trying to login. Email or password probably wrong.");
-            else this.$router.push("/");
-        });
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                credentials: 'include', //  Don't forget to specify this if you need cookies
+                body: JSON.stringify({ email: this.email, password: this.password }),
+            })
+                .then((response) => {
+                    if (!response.ok) alert("Error while trying to login. Email or password probably wrong.");
+                    else this.$router.push("/");
+                });
         }
     }
 
@@ -111,16 +111,17 @@ button {
     width: 90px;
     margin: 10px 0px;
 }
+
 .text {
-color: rgb(185, 120, 188);
+    color: rgb(185, 120, 188);
     display: inline-block;
     margin: 15px 0px;
     text-transform: uppercase;
 }
 
-.link{
+.link {
 
-background: linear-gradient(to left, #553c9a, #b393d3);
+    background: linear-gradient(to left, #553c9a, #b393d3);
     border: 0;
     margin-top: 10px;
     padding: 10px 20px;

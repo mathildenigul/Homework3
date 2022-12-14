@@ -22,8 +22,8 @@
             <div class="text"> Already have a user? </div>
 
             <div class="button">
-                <router-link style="text-decoration:none; color: inherit;" to="/login" custom v-slot="{ navigate }"> 
-                    <button @click="navigate" role="link">Log in</button> 
+                <router-link style="text-decoration:none; color: inherit;" to="/login" custom v-slot="{ navigate }">
+                    <button @click="navigate" role="link">Log in</button>
                 </router-link>
             </div>
         </form>
@@ -78,17 +78,17 @@ export default {
 
             if (!this.passwordError) {
                 fetch("http://localhost:3000/auth/signup", {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json",
-                },
-                credentials: 'include',
-                body: JSON.stringify({email: this.email, password: this.password}),
-            })
-            .then((response) => {
-                if(!response.ok) alert("Error while trying to signup. Email probably already in use.");
-                else this.$router.push("/");
-            })
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    credentials: 'include',
+                    body: JSON.stringify({ email: this.email, password: this.password }),
+                })
+                    .then((response) => {
+                        if (!response.ok) alert("Error while trying to signup. Email probably already in use.");
+                        else this.$router.push("/");
+                    })
             }
         }
     }
