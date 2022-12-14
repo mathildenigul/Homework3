@@ -6,7 +6,7 @@
         <p>{{ post.date }}</p>
       </div>
       <div class="post-text">
-        <textarea v-model="text">{{ post.body }}</textarea> <!-- see ei tööta hetkel -->
+        <textarea required v-model="post.body"></textarea>
       </div>
       <div>
         <button v-on:click="updatePost(post.id, text)">Update</button> <!-- see ei tööta hetkel -->
