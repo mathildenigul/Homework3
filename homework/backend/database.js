@@ -42,7 +42,10 @@ INSERT INTO posts (date, body) VALUES
 `;
 
 // A function to execute the previous queries
-execute(createPostsTblQuery).then(execute(createPostsContentQuery));
+execute(createPostsTblQuery).then((result) => {
+  console.log(result);
+  execute(createPostsContentQuery);
+});
 execute(createUsersTblQuery);
 
 module.exports = pool;
