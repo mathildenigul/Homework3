@@ -13,11 +13,13 @@
                 <button class="submit" id="button1" type="submit">Log in</button>
             </div>
 
-            <div class="text"> or  </div>
+            <div class="text"> Don't have a user yet?  </div>
 
 
-            <div class="link">
-                <router-link style="text-decoration:none; color: inherit;" to="/signup">Signup</router-link>
+            <div class="button">
+                <router-link style="text-decoration:none; color: inherit;" to="/signup" custom v-slot="{ navigate }"> 
+                    <button @click="navigate" role="link">Sign up</button> 
+                </router-link>
             </div>
 
 
@@ -64,73 +66,73 @@ export default {
     
 <style scoped>
 form {
-     max-width: 600px;
-     margin: 30px auto;
-     background: #fff;
-     text-align: left;
-     padding: 60px;
-     border-radius: 10px;
- }
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    text-align: left;
+    padding: 60px;
+    border-radius: 10px;
+}
 
- label {
-     color: rgb(185, 120, 188);
-     display: inline-block;
-     margin: 25px 0 15px;
-     text-transform: uppercase;
- }
-
- input,
- select {
-     display: block;
-     padding: 10px 6px;
-     width: 100%;
-     box-sizing: bordre-box;
-     border: none;
-     border-bottom: 1px solid #ddd;
-     color: rgb(116, 74, 128);
- }
-
- input[type="checkbox"] {
-     display: inline-block;
-     width: 16px;
-     margin: 0 10px 0;
-     position: relative;
-     top: 2px;
- }
-
-
- button {
-    
-     background: linear-gradient(to left, #553c9a, #b393d3);
-     border: 0;
-     margin-top: 10px;
-     padding: 10px 20px;
-     color: white;
-     border-radius: 30px;
-     
- }
- .text {
+label {
     color: rgb(185, 120, 188);
-     display: inline-block;
-     margin: 25px 25px 15px;
-     text-transform: uppercase;
- }
+    display: inline-block;
+    margin: 25px 0 15px;
+    text-transform: uppercase;
+}
 
- .link{
-    
+input,
+select {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: bordre-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: rgb(116, 74, 128);
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    margin: 0 10px 0;
+    position: relative;
+    top: 2px;
+}
+
+
+button {
     background: linear-gradient(to left, #553c9a, #b393d3);
-     border: 0;
-     margin-top: 10px;
-     padding: 10px 20px;
-     color: white;
-     border-radius: 30px;
-     width: 50px;
- }
+    border: 0;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 90px;
+    margin: 10px 0px;
+}
+.text {
+color: rgb(185, 120, 188);
+    display: inline-block;
+    margin: 15px 0px;
+    text-transform: uppercase;
+}
 
- .error {
-     color: #ff0000;
-     margin-top: 10px;
-     font-size: 0.8em;
-     font-weight: bold;
- }
+.link{
+
+background: linear-gradient(to left, #553c9a, #b393d3);
+    border: 0;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    width: 50px;
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
 </style>

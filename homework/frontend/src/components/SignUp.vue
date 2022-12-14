@@ -16,7 +16,15 @@
                 <label>Please accept terms and conditions</label>
             </div>
             <div class="button">
-                <button class="submit" type="submit">Sign up</button>
+                <button type="submit">Sign up</button>
+            </div>
+
+            <div class="text"> Already have a user? </div>
+
+            <div class="button">
+                <router-link style="text-decoration:none; color: inherit;" to="/login" custom v-slot="{ navigate }"> 
+                    <button @click="navigate" role="link">Log in</button> 
+                </router-link>
             </div>
         </form>
 
@@ -91,60 +99,68 @@ export default {
     
 <style scoped>
 form {
-     max-width: 600px;
-     margin: 30px auto;
-     background: #fff;
-     text-align: left;
-     padding: 20px;
-     border-radius: 10px;
- }
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+}
 
- label {
-     color: rgb(185, 120, 188);
-     display: inline-block;
-     margin: 25px 0 15px;
-     text-transform: uppercase;
- }
+label {
+    color: rgb(185, 120, 188);
+    display: inline-block;
+    margin: 25px 0 15px;
+    text-transform: uppercase;
+}
 
- input,
- select {
-     display: block;
-     padding: 10px 6px;
-     width: 100%;
-     box-sizing: bordre-box;
-     border: none;
-     border-bottom: 1px solid #ddd;
-     color: rgb(116, 74, 128);
- }
+input,
+select {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: bordre-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: rgb(116, 74, 128);
+}
 
- input[type="checkbox"] {
-     display: inline-block;
-     width: 16px;
-     margin: 0 10px 0;
-     position: relative;
-     top: 2px;
- }
+input[type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    margin: 0 10px 0;
+    position: relative;
+    top: 2px;
+}
 
- 
+button {
+    background: linear-gradient(to left, #553c9a, #b393d3);
+    border: 0;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 90px;
+    margin: 10px 0px;
+}
 
- button {
-     background: linear-gradient(to left, #553c9a, #b393d3);
-     border: 0;
-     padding: 10px 20px;
-     color: white;
-     border-radius: 20px;
- }
+.submit {
+    text-align: center;
+}
 
- .submit {
-     text-align: center;
- }
+.error {
+    color: #ff0000;
+    margin-top: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
 
- .error {
-     color: #ff0000;
-     margin-top: 10px;
-     font-size: 0.8em;
-     font-weight: bold;
- }
+.text {
+    color: rgb(185, 120, 188);
+    display: inline-block;
+    margin: 15px 0px;
+    text-transform: uppercase;
+}
 </style>
     
     
