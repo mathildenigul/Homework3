@@ -1,7 +1,7 @@
 <template>
   <div id="footer">
     <div class="link">
-            <router-link style="text-decoration: none; color: inherit;" to="/contactus">Contact Us</router-link>
+            <router-link style="text-decoration: none; color: inherit; " to="/contactus">Contact Us</router-link>
         </div>
    
   </div>
@@ -21,6 +21,9 @@
   font-weight: bold;
   width: 100%;
   height: 5%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .vertical-center {
@@ -30,5 +33,21 @@
   right: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+#footer div {
+    margin: 10px;
+
+}
+.link {
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+
+}
+
+.link:hover {
+    background-color: #553c9a;
+    color: #f8f7f8;
 }
 </style>
