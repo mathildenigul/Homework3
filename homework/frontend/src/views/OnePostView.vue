@@ -1,6 +1,7 @@
 <template>
     <div id="onepost">
     <Header />
+    <div id="pad"></div>
     <OnePost msg="Single Post view" />
     <Footer />
     </div>
@@ -24,6 +25,9 @@ export default {
 </script>
 
 <style scoped>
+#pad {
+  padding: 30px;
+}
 #contactus {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

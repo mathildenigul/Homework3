@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="post-container" v-for="post in posts" :key="post.id">
-      <a style="text-decoration: none;" :href="'/api/onepost/' + post.id">
+      <a style="text-decoration: none;" :href="'/onepost/' + post.id">
 <!-- <router-link style="text-decoration: none;" to="{name: '/OnePost', params: {postID: {post.id}}}"> -->
 
         <div>
