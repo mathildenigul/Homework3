@@ -20,7 +20,7 @@
   color: rgb(210, 207, 207);
   font-weight: bold;
   width: 100%;
-  height: 8%;
+  height: 5%;
   align-items: center;
   display: flex;
   flex-direction: column;

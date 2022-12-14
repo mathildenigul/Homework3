@@ -2,8 +2,6 @@
   <div class="container">
     <div class="post-container" v-for="post in posts" :key="post.id">
       <a style="text-decoration: none;" :href="'/onepost/' + post.id">
-<!-- <router-link style="text-decoration: none;" to="{name: '/OnePost', params: {postID: {post.id}}}"> -->
-
         <div>
           <p>{{ post.date }}</p>
         </div>
@@ -11,7 +9,6 @@
           <p>{{ post.body }}</p>
         </div>
       </a>
-     <!--  </router-link> -->
     </div>
   </div>
 </template>
@@ -43,7 +40,7 @@ export default {
 
 <style>
 a {
-  color: purple;
+  color: black;
 }
 .container {
   display: flex;

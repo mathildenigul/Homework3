@@ -86,6 +86,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
 
   @media (min-width: 700px) {
     min-height: 650px;
@@ -103,7 +104,7 @@ export default {
     border-radius: 6px;
     padding: 20px;
     border-color: #626262;
-    margin: 50px 0;
+    margin: 20px 0;
 }
 
 .user-profile {

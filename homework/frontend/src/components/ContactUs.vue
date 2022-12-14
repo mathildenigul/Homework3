@@ -12,8 +12,8 @@
         <label>message</label>
         <textarea v-model="message"></textarea>
       </div>
-      <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
+      <button @click="$router.push('/')">Submit</button>
+      <button @click="$router.push('/contactus')">Reset</button>
     </form>
   </template>
 
