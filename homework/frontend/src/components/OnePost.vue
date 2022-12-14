@@ -9,7 +9,7 @@
         <textarea required v-model="post.body"></textarea>
       </div>
       <div>
-        <button v-on:click="updatePost(post.id, text)">Update</button> <!-- see ei tööta hetkel -->
+        <button @click="updatePost">Update</button>
         <button>Delete</button>
       </div>
     </div>
@@ -39,8 +39,25 @@ export default {
         })
         .catch((err) => console.log(err.message));
     },
-    updatePost(id, body) {
-      console.log(1);
+    updatePost() {
+        let date = new Date().toDateString();
+        fetch(`http://localhost:3000/api/posts/${this.post.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(this.post),
+      })
+        .then((response) => {
+          console.log(response.data);
+          //this.$router.push("/apost/" + this.post.id);
+          // We are using the router instance of this element to navigate to a different URL location
+          this.$router.push("/");
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+      /* console.log(1);
       let date = new Date().toDateString();
       fetch(`http://localhost:3000/api/posts/${id}`, {
             method: "PUT",
@@ -51,7 +68,7 @@ export default {
         })
         .then((response) => {
             console.log(response);
-        });
+        }); */
     } 
   },
   mounted() {
