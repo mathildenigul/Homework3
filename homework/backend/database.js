@@ -18,8 +18,8 @@ const execute = async (query) => {
   }
 };
 
-/* DROP TABLE IF EXISTS posts; */
 const createPostsTblQuery = `
+DROP TABLE IF EXISTS posts;
 CREATE TABLE IF NOT EXISTS posts (
     id SERIAL PRIMARY KEY,    
     date VARCHAR(30) NOT NULL,     
