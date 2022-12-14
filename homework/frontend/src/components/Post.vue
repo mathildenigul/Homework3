@@ -7,7 +7,6 @@
         <div>
           <p>{{ post.date }}</p>
         </div>
-        <div><p>{{ post.id }}</p></div>
         <div class="post-text">
           <p>{{ post.body }}</p>
         </div>

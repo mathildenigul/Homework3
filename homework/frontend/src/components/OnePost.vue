@@ -10,7 +10,7 @@
       </div>
       <div>
         <button @click="updatePost">Update</button>
-        <button>Delete</button>
+        <button @click="deletePost">Delete</button>
       </div>
     </div>
   </div>
@@ -47,29 +47,32 @@ export default {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(this.post),
-      })
+    })
         .then((response) => {
-          console.log(response.data);
+        console.log(response.data);
           //this.$router.push("/apost/" + this.post.id);
           // We are using the router instance of this element to navigate to a different URL location
-          this.$router.push("/");
+        this.$router.push("/");
         })
         .catch((e) => {
-          console.log(e);
+        console.log(e);
         });
-      /* console.log(1);
-      let date = new Date().toDateString();
-      fetch(`http://localhost:3000/api/posts/${id}`, {
-            method: "PUT",
-            headers: {
-            "Content-Type": "application/json",
-            },
-            body: JSON.stringify({date: date, body: body}),
-        })
+    },
+    deletePost() {
+      // using Fetch - delete method - delets a specific post based on the passed id
+    fetch(`http://localhost:3000/api/posts/${this.post.id}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+    })
         .then((response) => {
-            console.log(response);
-        }); */
-    } 
+        console.log(response.data);
+          // We are using the router instance of this element to navigate to a different URL location
+        this.$router.push("/");
+        })
+        .catch((e) => {
+        console.log(e);
+        });
+    },
   },
   mounted() {
     // call fetchPost() when this element (OnePost) mounts
