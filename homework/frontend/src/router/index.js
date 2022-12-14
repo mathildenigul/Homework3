@@ -58,7 +58,16 @@ const routes = [
     name: "onepost",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/OnePostView.vue"),
-  },
+    
+    beforeEnter: async(to, from, next) => {
+        let authResult = await auth.authenticated();
+        if (!authResult) {
+            next('/login')
+        } else {
+            next();
+  }
+
+    }}
 ];
 
 const router = createRouter({
